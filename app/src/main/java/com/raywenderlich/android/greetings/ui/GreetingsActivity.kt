@@ -37,7 +37,6 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.ArrayAdapter
 import android.widget.RadioButton
 import com.raywenderlich.android.greetings.R
-import com.raywenderlich.android.greetings.model.GreetingStore
 import com.raywenderlich.android.greetings.model.Language
 import kotlinx.android.synthetic.main.activity_greetings.*
 
@@ -78,7 +77,7 @@ class GreetingsActivity : AppCompatActivity() {
 
   private fun configureGreeting() {
     greeting.text = viewModel.greeting()
-    count.text = resources.getQuantityString(R.plurals.greetings, viewModel.greetingCount, viewModel.greetingCount)
+    count.text = viewModel.countText()
   }
 }
 
